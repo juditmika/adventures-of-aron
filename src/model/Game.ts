@@ -30,11 +30,11 @@ export class Game {
 }
 
 const world = Map.load([
-	["rock", "rock", "rock", "rock", "rock", "rock", "rock", "rock", "rock"],
+	["rock", "rock", "rock", "grass", "grass", "rock", "rock", "rock", "rock"],
 	["rock", "grass", "grass", "grass", "grass", "grass", "grass", "rock", "rock"],
 	["rock", "grass", "grass", "grass", "grass", "grass", "grass", "rock", "rock"],
 	["rock", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "rock"],
-	["grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
+	["grass", "grass", "grass", "grass", "tree", "grass", "grass", "grass", "grass"],
 	["grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
 	["rock", "grass", "grass", "grass", "rock", "rock", "grass", "rock", "rock"],
 	["rock", "grass", "grass", "grass", "rock", "rock", "grass", "grass", "rock"],
@@ -44,7 +44,7 @@ const world = Map.load([
 	["rock", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "rock"],
 	["grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
 	["grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass"],
+	["rock", "rock", "rock", "grass", "grass", "tree", "grass", "rock", "rock"],
 	["rock", "rock", "rock", "grass", "grass", "grass", "grass", "rock", "rock"],
-	["rock", "rock", "rock", "grass", "grass", "grass", "grass", "rock", "rock"],
-	["rock", "rock", "rock", "rock", "rock", "rock", "rock", "rock", "rock"],
+	["rock", "rock", "rock", "grass", "grass", "rock", "rock", "rock", "rock"],
 ])
