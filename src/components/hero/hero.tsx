@@ -13,7 +13,7 @@ export class AronHero {
 	previous = new Point(0, 0)
 	render() {
 		const position = this.hero.position.subtract(this.scope.leftTop)
-		const transition = position.subtract(this.previous).distance > 2 ? "none" : "left .5s, top .5s"
+		const transition = position.subtract(this.previous).distance > 2 ? "none" : "left .2s, top .2s"
 		this.previous = position
 		return (
 			<Host

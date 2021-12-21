@@ -13,6 +13,10 @@ export namespace Components {
         "hero": Hero;
         "scope": Bounds;
     }
+    interface AronItem {
+        "item": { position: Point, type: "coin" };
+        "scope": Bounds;
+    }
     interface AronMap {
         "map": Map;
         "scope": Bounds;
@@ -35,6 +39,12 @@ declare global {
         prototype: HTMLAronHeroElement;
         new (): HTMLAronHeroElement;
     };
+    interface HTMLAronItemElement extends Components.AronItem, HTMLStencilElement {
+    }
+    var HTMLAronItemElement: {
+        prototype: HTMLAronItemElement;
+        new (): HTMLAronItemElement;
+    };
     interface HTMLAronMapElement extends Components.AronMap, HTMLStencilElement {
     }
     var HTMLAronMapElement: {
@@ -50,6 +60,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "aron-game": HTMLAronGameElement;
         "aron-hero": HTMLAronHeroElement;
+        "aron-item": HTMLAronItemElement;
         "aron-map": HTMLAronMapElement;
         "aron-tile": HTMLAronTileElement;
     }
@@ -59,6 +70,10 @@ declare namespace LocalJSX {
     }
     interface AronHero {
         "hero"?: Hero;
+        "scope"?: Bounds;
+    }
+    interface AronItem {
+        "item"?: { position: Point, type: "coin" };
         "scope"?: Bounds;
     }
     interface AronMap {
@@ -72,6 +87,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "aron-game": AronGame;
         "aron-hero": AronHero;
+        "aron-item": AronItem;
         "aron-map": AronMap;
         "aron-tile": AronTile;
     }
@@ -82,6 +98,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "aron-game": LocalJSX.AronGame & JSXBase.HTMLAttributes<HTMLAronGameElement>;
             "aron-hero": LocalJSX.AronHero & JSXBase.HTMLAttributes<HTMLAronHeroElement>;
+            "aron-item": LocalJSX.AronItem & JSXBase.HTMLAttributes<HTMLAronItemElement>;
             "aron-map": LocalJSX.AronMap & JSXBase.HTMLAttributes<HTMLAronMapElement>;
             "aron-tile": LocalJSX.AronTile & JSXBase.HTMLAttributes<HTMLAronTileElement>;
         }

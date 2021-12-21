@@ -22,7 +22,7 @@ export class AronGame implements ComponentWillLoad {
 				direction = "up"
 				break
 			case "ArrowDown":
-				direction = "down"
+				direction = "down"   
 				break
 		}
 		if (direction)
@@ -35,6 +35,7 @@ export class AronGame implements ComponentWillLoad {
 		return (
 			<Host>
 				<aron-map map={this.game.map} scope={this.game.scope}></aron-map>
+				{this.game.items.map(item => <aron-item item={item} scope={this.game.scope}></aron-item>)}
 				<aron-hero hero={this.game.hero} scope={this.game.scope}></aron-hero>
 			</Host>
 		)
